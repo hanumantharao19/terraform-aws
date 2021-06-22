@@ -1,7 +1,7 @@
 provider "aws" {
   region     = "us-west-2"
-  access_key = "AKIAXZRCADIOMF6HWYMZ"
-  secret_key = "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"
+  access_key = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  secret_key = xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 }
 
 resource "aws_instance" "ramana" {
