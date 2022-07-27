@@ -1,14 +1,12 @@
 provider "aws" {
   region     = "us-west-2"
-  access_key = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  secret_key = xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-}
+ }
 
 terraform {
   backend "s3" {
-    bucket = "terraform-state-statging"
+    bucket = "terraform-state-mhr-folder"
     key    = "eks/terraform.tfstate"
-    region = "us-east-1"
+    region = "us-east-2"
   }
 }
 
