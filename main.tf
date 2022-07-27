@@ -4,6 +4,14 @@ provider "aws" {
   secret_key = xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 }
 
+terraform {
+  backend "s3" {
+    bucket = "terraform-state-statging"
+    key    = "eks/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
+
 resource "aws_instance" "ramana" {
   ami                    = "ami-0800fc0fa715fdcfe"
   instance_type          = "t2.micro"
